@@ -1,0 +1,46 @@
+{
+  "name": "agent-codex",
+  "version": "0.1.0",
+  "description": "Governance-as-code policy engine for AI platforms — define policies in YAML, map to compliance standards, evaluate decisions, and produce audit-ready ledgers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --import ts-node/esm --test tests/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai-governance",
+    "policy-as-code",
+    "compliance",
+    "soc2",
+    "eu-ai-act",
+    "iso-27001",
+    "platform-engineering"
+  ],
+  "author": "Mirza Causevic <miz@kineticgain.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.0.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.7.5",
+    "@types/supertest": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.6",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

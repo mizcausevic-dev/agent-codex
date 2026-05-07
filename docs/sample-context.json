@@ -1,0 +1,15 @@
+{
+  "contextType": "agent_registration",
+  "agentId": "agt_finance_audit",
+  "environment": "production",
+  "primaryModel": "claude-opus-4-7",
+  "fallbackModel": "claude-sonnet-4-6",
+  "declaredPurpose": "Quarterly invoice anomaly detection for finance team",
+  "riskClassification": "high",
+  "attributes": {
+    "auditRetentionDays": 30,
+    "auditLoggingEnabled": true,
+    "credentialSource": "inline",
+    "humanOversightMechanism": null
+  }
+}

@@ -3,7 +3,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
-import { env } from './config/env.js';
+import { env } from './config/env';
 import {
   policiesRouter,
   packsRouter,
@@ -11,9 +11,9 @@ import {
   approvalsRouter,
   complianceRouter,
   dashboardRouter,
-} from './routes/policies.js';
-import { evaluateRouter } from './routes/evaluate.js';
-import { openApiSpec } from './docs/swagger.js';
+} from './routes/policies';
+import { evaluateRouter } from './routes/evaluate';
+import { openApiSpec } from './docs/swagger';
 
 export const app = express();
 const startedAt = Date.now();

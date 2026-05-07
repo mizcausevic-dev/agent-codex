@@ -1,4 +1,4 @@
-import type { Policy, PolicyPack } from '../schemas/validation-schemas.js';
+import type { Policy, PolicyPack } from '../schemas/validation-schemas';
 
 const now = new Date().toISOString();
 

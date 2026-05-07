@@ -1,5 +1,10 @@
 # AgentCodex
 
+[![CI](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-66FCF1)](LICENSE)
+
 > Governance-as-code policy engine for AI platforms — define policies in YAML, map them to compliance standards, evaluate decisions at runtime, and produce audit-ready ledgers.
 
 **Recruiter takeaway:** the control plane between MCP Sentinel (tool surface) and AgentObserve (runtime) — codifies *under what conditions* an AI platform is allowed to operate, with cross-walks to SOC 2, EU AI Act, ISO 27001, PCI-DSS, GDPR, HIPAA, and NIST.
@@ -184,17 +189,37 @@ The service listens on `http://localhost:3002`. Swagger UI is at `/docs`.
 
 ```bash
 # Smoke check
+
+[![CI](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-66FCF1)](LICENSE)
 curl http://localhost:3002/health
 
 # List the catalog
+
+[![CI](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-66FCF1)](LICENSE)
 curl http://localhost:3002/api/policies | jq
 
 # Evaluate a registration
+
+[![CI](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-66FCF1)](LICENSE)
 curl -X POST http://localhost:3002/api/evaluate \
   -H 'Content-Type: application/json' \
   -d @docs/sample-context.json | jq
 
 # Run the test suite
+
+[![CI](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/agent-codex/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-66FCF1)](LICENSE)
 npm test
 ```
 

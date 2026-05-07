@@ -1,4 +1,4 @@
-import { policies, supportedFrameworks } from '../data/policies.js';
+import { policies, supportedFrameworks } from '../data/policies';
 
 export interface FrameworkCoverage {
   frameworkId: string;

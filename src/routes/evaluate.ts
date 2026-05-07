@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { EvaluationContextSchema, DryRunRequestSchema, PolicySchema } from '../schemas/validation-schemas.js';
-import { policies, findPack } from '../data/policies.js';
-import { decisions } from '../data/decisions.js';
-import { evaluateContext, evaluatePolicy } from '../engine/policy-engine.js';
+import { EvaluationContextSchema, DryRunRequestSchema, PolicySchema } from '../schemas/validation-schemas';
+import { policies, findPack } from '../data/policies';
+import { decisions } from '../data/decisions';
+import { evaluateContext, evaluatePolicy } from '../engine/policy-engine';
 
 export const evaluateRouter = Router();
 

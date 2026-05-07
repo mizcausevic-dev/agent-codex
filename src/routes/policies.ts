@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { policies, policyPacks, supportedFrameworks, findPolicy, findPack, policiesInPack } from '../data/policies.js';
-import { decisions, approvals } from '../data/decisions.js';
-import { buildComplianceCoverage } from '../engine/compliance-mapper.js';
+import { policies, policyPacks, supportedFrameworks, findPolicy, findPack, policiesInPack } from '../data/policies';
+import { decisions, approvals } from '../data/decisions';
+import { buildComplianceCoverage } from '../engine/compliance-mapper';
 
 export const policiesRouter = Router();
 

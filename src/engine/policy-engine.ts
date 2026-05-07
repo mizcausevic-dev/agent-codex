@@ -1,4 +1,4 @@
-import type { Policy, PolicyCondition, EvaluationContext } from '../schemas/validation-schemas.js';
+import type { Policy, PolicyCondition, EvaluationContext } from '../schemas/validation-schemas';
 
 function getFieldValue(context: EvaluationContext, field: string): unknown {
   if (!field.includes('.')) {

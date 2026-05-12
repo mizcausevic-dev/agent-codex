@@ -269,3 +269,7 @@ MIT — see [`LICENSE`](LICENSE)
 ---
 
 *Built by [Mirza Causevic](https://github.com/mizcausevic-dev) — Director of Web Engineering · Platform Architecture · AI Governance · 30 yrs (IBM · CyberArk · Alteryx · Digital.ai · Gryphon.ai). Boston, MA.*
+
+---
+
+**Connect:** [LinkedIn](https://www.linkedin.com/in/mirzacausevic/) · [Kinetic Gain](https://kineticgain.com) · [Medium](https://medium.com/@mizcausevic/) · [Skills](https://mizcausevic.com/skills/)

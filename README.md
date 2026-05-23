@@ -268,7 +268,7 @@ MIT — see [`LICENSE`](LICENSE)
 
 ---
 
-*Built by [Mirza Causevic](https://github.com/mizcausevic-dev) — Director of Web Engineering · Platform Architecture · AI Governance · 30 yrs (IBM · CyberArk · Alteryx · Digital.ai · Gryphon.ai). Boston, MA.*
+*Built by [Mirza Causevic](https://github.com/mizcausevic-dev) — Boston Enterprise Technologist · Platform Architecture · AI Governance · 30 yrs (IBM · CyberArk · Alteryx · Digital.ai · Gryphon.ai). Boston, MA.*
 
 ---
 

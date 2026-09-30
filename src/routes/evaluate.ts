@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { EvaluationContextSchema, DryRunRequestSchema, PolicySchema } from '../schemas/validation-schemas';
 import { policies, findPack } from '../data/policies';
-import { decisions } from '../data/decisions';
-import { evaluateContext, evaluatePolicy } from '../engine/policy-engine';
+import { evaluateContext } from '../engine/policy-engine';
+import { simulateDryRun } from '../engine/dry-run';
 
 export const evaluateRouter = Router();
 
@@ -63,55 +63,7 @@ evaluateRouter.post('/dry-run', (req, res) => {
   if (!candidate.success) {
     return res.status(400).json({ error: 'invalid-candidate-policy', issues: candidate.error.issues });
   }
-
-  // Mock historic context replay using the recorded decisions as proxies
-  const sample = decisions.slice(0, parsed.data.sampleSize);
-  let wouldAllow = 0;
-  let wouldWarn = 0;
-  let wouldDeny = 0;
-  let wouldApprove = 0;
-  const examples: { decisionId: string; agentId: string; impact: 'no-change' | 'now-blocked' | 'now-warned' | 'now-approval' }[] = [];
-
-  for (const d of sample) {
-    const synthetic = {
-      contextType: d.contextType,
-      agentId: d.agentId,
-      environment: d.environment,
-      attributes: { auditRetentionDays: 90, dataClass: 'pii', auditLoggingEnabled: true },
-      ownerTeam: 'platform-eng',
-    };
-    const match = evaluatePolicy(candidate.data, synthetic as any);
-    if (!match) {
-      wouldAllow += 1;
-      continue;
-    }
-    if (match.action === 'deny') wouldDeny += 1;
-    else if (match.action === 'warn') wouldWarn += 1;
-    else if (match.action === 'require_approval') wouldApprove += 1;
-    else wouldAllow += 1;
-
-    if (examples.length < 5 && d.outcome === 'allow') {
-      const impact = match.action === 'deny'
-        ? 'now-blocked'
-        : match.action === 'warn'
-          ? 'now-warned'
-          : match.action === 'require_approval'
-            ? 'now-approval'
-            : 'no-change';
-      examples.push({ decisionId: d.decisionId, agentId: d.agentId, impact });
-    }
-  }
-
-  return res.json({
-    candidatePolicyId: candidate.data.id,
-    sampleSize: sample.length,
-    projectedOutcome: {
-      wouldAllow,
-      wouldWarn,
-      wouldApprove,
-      wouldDeny,
-    },
-    impactedExamples: examples,
-    note: 'Dry-run replays the candidate policy against recorded decisions to estimate blast radius before enabling.',
-  });
+  const preview = simulateDryRun(candidate.data, parsed.data.sampleSize);
+  if ('error' in preview) return res.status(400).json(preview);
+  return res.json(preview);
 });

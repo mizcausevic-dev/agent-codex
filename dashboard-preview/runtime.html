@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgentCodex | Local fixture evidence</title>
+  <link rel="stylesheet" href="/demo/runtime.css">
+  <script defer src="/demo/runtime-ui.js"></script>
+  <script defer src="/demo/runtime.js"></script>
+</head>
+<body data-app="codex">
+  <div class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="mark" aria-hidden="true">AC</span><div><p class="kicker">LOCAL API EVIDENCE / 04</p><h1>AgentCodex</h1></div></div>
+      <p class="state" id="state" role="status">Loading local fixture responses…</p>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="kicker">Synthetic policies · actual API response</p>
+        <h2 id="intro-title">Trace policy to decision.</h2>
+        <p>This page reads the local policy API and seeded decisions. Framework tags illustrate mapping only; no control effectiveness, legal compliance, or immutable audit ledger is established.</p>
+      </section>
+      <section class="metrics" id="metrics" aria-label="Fixture summary"></section>
+      <div class="panels">
+        <section class="panel" aria-labelledby="primary-title"><div class="panel-head"><p class="kicker">POLICIES / GET /api/policies</p><h3 id="primary-title">Fixture policy library</h3></div><div class="table-wrap"><table><thead><tr id="primary-head"></tr></thead><tbody id="primary-rows"></tbody></table></div></section>
+        <section class="panel" aria-labelledby="secondary-title"><div class="panel-head"><p class="kicker">DECISIONS / GET /api/decisions</p><h3 id="secondary-title">Seeded decision records</h3></div><div class="stack" id="secondary"></div></section>
+      </div>
+    </main>
+    <footer>LOCAL FIXTURE MODE · no authentication, approvals, or immutable ledger · <a href="/docs">API documentation</a></footer>
+  </div>
+</body>
+</html>

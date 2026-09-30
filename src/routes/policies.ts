@@ -1,3 +1,4 @@
+import '../config/demo-only';
 import { Router } from 'express';
 import { policies, policyPacks, supportedFrameworks, findPolicy, findPack, policiesInPack } from '../data/policies';
 import { decisions, approvals } from '../data/decisions';

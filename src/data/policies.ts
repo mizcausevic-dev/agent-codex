@@ -71,7 +71,7 @@ export const policies: Policy[] = [
       { field: 'environment', op: 'eq', value: 'production' },
       { field: 'toolAllowlist', op: 'not_exists' },
     ],
-    conditionsOperator: 'any',
+    conditionsOperator: 'all',
     packs: ['production-baseline'],
     complianceTags: ['soc2:cc6.1', 'iso27001:a.9.4.1'],
     rationale: 'Wildcard tool access expands the blast radius of compromised prompts.',

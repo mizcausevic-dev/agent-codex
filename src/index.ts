@@ -1,3 +1,4 @@
+import './config/demo-only';
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';

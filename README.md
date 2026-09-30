@@ -4,7 +4,7 @@
 
 Local policy-evaluation reference API for AI agent contexts. It evaluates typed TypeScript policy fixtures, combines their outcomes, and shows example compliance-tag coverage.
 
-**Release boundary:** this is a fixture-backed simulator. It has no authentication, tenancy, policy loader, approval workflow, persistent decision log, retention guarantee, or immutable audit trail. It does not establish legal or framework conformance. The demo binds to `127.0.0.1`; `NODE_ENV=production` refuses to start. Do not submit real decisions or personal data.
+**Release boundary:** this is a fixture-backed simulator. It has no authentication, tenancy, policy loader, approval workflow, persistent decision log, retention guarantee, or immutable audit trail. It does not establish legal or framework conformance. The demo binds to `127.0.0.1`; `NODE_ENV=production` rejects startup and imports of the app or route modules. Do not submit real decisions or personal data.
 
 ## What it does
 

@@ -1,3 +1,4 @@
+import '../config/demo-only';
 import { Router } from 'express';
 import { EvaluationContextSchema, DryRunRequestSchema, PolicySchema } from '../schemas/validation-schemas';
 import { policies, findPack } from '../data/policies';
